@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!--
+/************************************************************/
+/* Author: Matt Tothero, Ruben Swyers, Mike Pandel 			                        
+/* Creation Date: October 26, 2014 		                
+/* Due Date:                               
+/* Course: CSC480 010					    			    
+/* Professor Name: Dr. Frye				    				
+/* Assignment: Main Project                                        
+/* Filename: RecipeOntology.xml				    			
+/* Purpose: The following is an ontology of a food recipe. Given what the user has available
+			in his/her kitchen, what recipe can be made.
+/************************************************************/
+-->
+
+<rdf:RDF	
+			xmlns:owl = "http://www.w3.org/2002/07/owl#"
+			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+			xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+			xmlns:univ="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml#"
+			xml:base="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml">
+
+<!-- Class Definitions -->		 
+	
+	<!-- Recipe Class -->
+	<owl:Class rdf:ID="Recipe">
+		<rdfs:label>Recipe</rdfs:label>
+	</owl:Class>
+
+	<!-- Food Class -->
+	<owl:Class rdf:ID="Food">
+		<rdfs:label>Food</rdfs:label>
+	</owl:Class>
+	
+	<!-- FoodGroups Class -->
+	<owl:Class rdf:ID="FoodGroups">
+		<rdfs:label>Food Groups</rdfs:label>
+	</owl:Class>
+	
+	<!-- Fruits Class -->
+	<owl:Class rdf:ID="Fruits">
+		<rdfs:label>Fruits</rdfs:label>
+	</owl:Class>
+	
+	<!-- Vegetables Class -->
+	<owl:Class rdf:ID="Vegetables">
+		<rdfs:label>Vegetables</rdfs:label>
+	</owl:Class>
+	
+	<!-- Grains Class -->
+	<owl:Class rdf:ID="Grains">
+		<rdfs:label>Grains</rdfs:label>
+	</owl:Class>
+	
+	<!-- ProteinFoods Class -->
+	<owl:Class rdf:ID="ProteinFoods">
+		<rdfs:label>Protein Foods</rdfs:label>
+	</owl:Class>
+	
+	<!-- Dairy Class -->
+	<owl:Class rdf:ID="Dairy">
+		<rdfs:label>Dairy</rdfs:label>
+	</owl:Class>
+	
+	<!-- Oils Class -->
+	<owl:Class rdf:ID="Oils">
+		<rdfs:label>Oils</rdfs:label>
+	</owl:Class>
+	
+	<!-- MiscFoods Class -->
+	<owl:Class rdf:ID="MiscFoods">
+		<rdfs:label>Miscellaneous Foods</rdfs:label>
+	</owl:Class>
+	
+	<!-- Cusine Class -->
+	<owl:Class rdf:ID="Cuisine">
+		<rdfs:label>Cuisine</rdfs:label>
+	</owl:Class>
+	
+	<!-- Chinese Class -->
+	<owl:Class rdf:ID="Chinese">
+		<rdfs:label>Chinese</rdfs:label>
+	</owl:Class>
+	
+	<!-- Mediterranean Class -->
+	<owl:Class rdf:ID="Mediterranean">
+		<rdfs:label>Mediterranean</rdfs:label>
+	</owl:Class>
+	
+	<!-- Mexican Class -->
+	<owl:Class rdf:ID="Mexican">
+		<rdfs:label>Mexican</rdfs:label>
+	</owl:Class>
+	
+	<!-- Italian Class -->
+	<owl:Class rdf:ID="Italian">
+		<rdfs:label>Italian</rdfs:label>
+	</owl:Class>
+	
+	<!-- MiscStyle Class -->
+	<owl:Class rdf:ID="MiscStyle">
+		<rdfs:label>Miscellaneous Style</rdfs:label>
+	</owl:Class>
+	
+<!-- Property Definitions -->	
+
+	<!-- hasIngredients Property -->
+	<owl:ObjectProperty rdf:about="hasIngredients">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#Food"/>
+	</owl:ObjectProperty>
+	
+	<!-- dividedInto Property -->
+	<owl:ObjectProperty rdf:about="dividedInto">
+		<rdfs:domain rdf:resource="#Food"/>
+		<rdfs:range rdf:resource="#FoodGroups"/>
+	</owl:ObjectProperty>
+	
+	<!-- isClassifiedAs Property -->
+	<owl:ObjectProperty rdf:about="isClassifiedAs">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#Cuisine"/>
+	</owl:ObjectProperty>
+			
+</rdf:RDF>
