@@ -35,6 +35,15 @@
 	<!-- FoodGroups Class -->
 	<owl:Class rdf:ID="FoodGroups">
 		<rdfs:label>Food Groups</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Fruits" />
+			<owl:Class rdf:about="#Vegetables" />
+			<owl:Class rdf:about="#Grains" />
+			<owl:Class rdf:about="#ProteinFoods" />
+			<owl:Class rdf:about="#Dairy" />
+			<owl:Class rdf:about="#Oils" />
+			<owl:Class rdf:about="#MiscFoods" />
+		</owl:unionOf>
 	</owl:Class>
 
 	<!-- Fruits Class -->
@@ -117,6 +126,19 @@
 	<!-- Cusine Class -->
 	<owl:Class rdf:ID="Cuisine">
 		<rdfs:label>Cuisine</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#French" />
+			<owl:Class rdf:about="#Indian" />
+			<owl:Class rdf:about="#Thai" />
+			<owl:Class rdf:about="#Japenese" />
+			<owl:Class rdf:about="#Chinese" />
+			<owl:Class rdf:about="#Spanish" />
+			<owl:Class rdf:about="#Greek" />
+			<owl:Class rdf:about="#Lebanese" />
+			<owl:Class rdf:about="#Mexican" />
+			<owl:Class rdf:about="#Italian" />
+			<owl:Class rdf:about="#MiscStyle" />
+		</owl:unionOf>
 	</owl:Class>
 
 	<!-- French Class -->
