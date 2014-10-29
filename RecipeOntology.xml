@@ -40,7 +40,12 @@
 	<!-- Fruits Class -->
 	<owl:Class rdf:ID="Fruits">
 		<rdfs:label>Fruits</rdfs:label>
-		<owl:disjointWith rdf:resource="#Vegetables"
+		<owl:disjointWith rdf:resource="#Vegetables" />
+		<owl:disjointWith rdf:resource="#Grains" />
+		<owl:disjointWith rdf:resource="#ProteinFoods" />
+		<owl:disjointWith rdf:resource="#Dairy" />
+		<owl:disjointWith rdf:resource="#Oils" />
+		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
 	<!-- Vegetables Class -->
