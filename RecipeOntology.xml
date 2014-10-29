@@ -51,31 +51,67 @@
 	<!-- Vegetables Class -->
 	<owl:Class rdf:ID="Vegetables">
 		<rdfs:label>Vegetables</rdfs:label>
+		<owl:disjointWith rdf:resource="#Fruits" />
+		<owl:disjointWith rdf:resource="#Grains" />
+		<owl:disjointWith rdf:resource="#ProteinFoods" />
+		<owl:disjointWith rdf:resource="#Dairy" />
+		<owl:disjointWith rdf:resource="#Oils" />
+		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
 	<!-- Grains Class -->
 	<owl:Class rdf:ID="Grains">
 		<rdfs:label>Grains</rdfs:label>
+		<owl:disjointWith rdf:resource="#Vegetables" />
+		<owl:disjointWith rdf:resource="#Fruits" />
+		<owl:disjointWith rdf:resource="#ProteinFoods" />
+		<owl:disjointWith rdf:resource="#Dairy" />
+		<owl:disjointWith rdf:resource="#Oils" />
+		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
 	<!-- ProteinFoods Class -->
 	<owl:Class rdf:ID="ProteinFoods">
 		<rdfs:label>Protein Foods</rdfs:label>
+		<owl:disjointWith rdf:resource="#Vegetables" />
+		<owl:disjointWith rdf:resource="#Grains" />
+		<owl:disjointWith rdf:resource="#Fruits" />
+		<owl:disjointWith rdf:resource="#Dairy" />
+		<owl:disjointWith rdf:resource="#Oils" />
+		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
 	<!-- Dairy Class -->
 	<owl:Class rdf:ID="Dairy">
 		<rdfs:label>Dairy</rdfs:label>
+		<owl:disjointWith rdf:resource="#Vegetables" />
+		<owl:disjointWith rdf:resource="#Grains" />
+		<owl:disjointWith rdf:resource="#ProteinFoods" />
+		<owl:disjointWith rdf:resource="#Fruits" />
+		<owl:disjointWith rdf:resource="#Oils" />
+		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
 	<!-- Oils Class -->
 	<owl:Class rdf:ID="Oils">
 		<rdfs:label>Oils</rdfs:label>
+		<owl:disjointWith rdf:resource="#Vegetables" />
+		<owl:disjointWith rdf:resource="#Grains" />
+		<owl:disjointWith rdf:resource="#ProteinFoods" />
+		<owl:disjointWith rdf:resource="#Dairy" />
+		<owl:disjointWith rdf:resource="#Fruits" />
+		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
 	<!-- MiscFoods Class -->
 	<owl:Class rdf:ID="MiscFoods">
 		<rdfs:label>Miscellaneous Foods</rdfs:label>
+		<owl:disjointWith rdf:resource="#Vegetables" />
+		<owl:disjointWith rdf:resource="#Grains" />
+		<owl:disjointWith rdf:resource="#ProteinFoods" />
+		<owl:disjointWith rdf:resource="#Dairy" />
+		<owl:disjointWith rdf:resource="#Oils" />
+		<owl:disjointWith rdf:resource="#Fruits" />
 	</owl:Class>
 
 	<!-- Cusine Class -->
@@ -83,14 +119,44 @@
 		<rdfs:label>Cuisine</rdfs:label>
 	</owl:Class>
 
+	<!-- French Class -->
+	<owl:Class rdf:ID="French">
+		<rdfs:label>French</rdfs:label>
+	</owl:Class>
+
+	<!-- Indian Class -->
+	<owl:Class rdf:ID="Indian">
+		<rdfs:label>Indian</rdfs:label>
+	</owl:Class>
+
+	<!-- Thai Class -->
+	<owl:Class rdf:ID="Thai">
+		<rdfs:label>Thai</rdfs:label>
+	</owl:Class>
+
+	<!-- Japenese Class -->
+	<owl:Class rdf:ID="Japenese">
+		<rdfs:label>Japenese</rdfs:label>
+	</owl:Class>
+
 	<!-- Chinese Class -->
 	<owl:Class rdf:ID="Chinese">
 		<rdfs:label>Chinese</rdfs:label>
 	</owl:Class>
 
-	<!-- Mediterranean Class -->
-	<owl:Class rdf:ID="Mediterranean">
-		<rdfs:label>Mediterranean</rdfs:label>
+	<!-- Spanish Class -->
+	<owl:Class rdf:ID="Spanish">
+		<rdfs:label>Spanish</rdfs:label>
+	</owl:Class>
+
+	<!-- Greek Class -->
+	<owl:Class rdf:ID="Greek">
+		<rdfs:label>Greek</rdfs:label>
+	</owl:Class>
+
+	<!-- Lebanese Class -->
+	<owl:Class rdf:ID="Lebanese">
+		<rdfs:label>Lebanese</rdfs:label>
 	</owl:Class>
 
 	<!-- Mexican Class -->
