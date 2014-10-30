@@ -20,19 +20,19 @@
 			xmlns:univ="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml#"
 			xml:base="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml">
 
-<!-- Class Definitions -->
+<!-- Class Definitions (Team)-->
 
-	<!-- Recipe Class -->
+	<!-- Recipe Class (Matt)-->
 	<owl:Class rdf:ID="Recipe">
 		<rdfs:label>Recipe</rdfs:label>
 	</owl:Class>
 
-	<!-- Food Class -->
+	<!-- Food Class (Matt)-->
 	<owl:Class rdf:ID="Food">
 		<rdfs:label>Food</rdfs:label>
 	</owl:Class>
 
-	<!-- FoodGroups Class -->
+	<!-- FoodGroups Class (Matt)-->
 	<owl:Class rdf:ID="FoodGroups">
 		<rdfs:label>Food Groups</rdfs:label>
 		<owl:unionOf rdf:parseType="Collection">
@@ -46,7 +46,7 @@
 		</owl:unionOf>
 	</owl:Class>
 
-	<!-- Fruits Class -->
+	<!-- Fruits Class (Matt)-->
 	<owl:Class rdf:ID="Fruits">
 		<rdfs:label>Fruits</rdfs:label>
 		<owl:disjointWith rdf:resource="#Vegetables" />
@@ -57,7 +57,7 @@
 		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
-	<!-- Vegetables Class -->
+	<!-- Vegetables Class (Matt)-->
 	<owl:Class rdf:ID="Vegetables">
 		<rdfs:label>Vegetables</rdfs:label>
 		<owl:disjointWith rdf:resource="#Fruits" />
@@ -68,7 +68,7 @@
 		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
-	<!-- Grains Class -->
+	<!-- Grains Class (Matt)-->
 	<owl:Class rdf:ID="Grains">
 		<rdfs:label>Grains</rdfs:label>
 		<owl:disjointWith rdf:resource="#Vegetables" />
@@ -79,7 +79,7 @@
 		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
-	<!-- ProteinFoods Class -->
+	<!-- ProteinFoods Class (Matt)-->
 	<owl:Class rdf:ID="ProteinFoods">
 		<rdfs:label>Protein Foods</rdfs:label>
 		<owl:disjointWith rdf:resource="#Vegetables" />
@@ -90,7 +90,7 @@
 		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
-	<!-- Dairy Class -->
+	<!-- Dairy Class (Matt)-->
 	<owl:Class rdf:ID="Dairy">
 		<rdfs:label>Dairy</rdfs:label>
 		<owl:disjointWith rdf:resource="#Vegetables" />
@@ -101,7 +101,7 @@
 		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
-	<!-- Oils Class -->
+	<!-- Oils Class (Matt)-->
 	<owl:Class rdf:ID="Oils">
 		<rdfs:label>Oils</rdfs:label>
 		<owl:disjointWith rdf:resource="#Vegetables" />
@@ -112,7 +112,7 @@
 		<owl:disjointWith rdf:resource="#MiscFoods" />
 	</owl:Class>
 
-	<!-- MiscFoods Class -->
+	<!-- MiscFoods Class (Matt)-->
 	<owl:Class rdf:ID="MiscFoods">
 		<rdfs:label>Miscellaneous Foods</rdfs:label>
 		<owl:disjointWith rdf:resource="#Vegetables" />
@@ -123,7 +123,7 @@
 		<owl:disjointWith rdf:resource="#Fruits" />
 	</owl:Class>
 
-	<!-- Cusine Class -->
+	<!-- Cusine Class (Matt)-->
 	<owl:Class rdf:ID="Cuisine">
 		<rdfs:label>Cuisine</rdfs:label>
 		<owl:unionOf rdf:parseType="Collection">
@@ -141,79 +141,277 @@
 		</owl:unionOf>
 	</owl:Class>
 
-	<!-- French Class -->
+	<!-- French Class (Matt)-->
 	<owl:Class rdf:ID="French">
 		<rdfs:label>French</rdfs:label>
 	</owl:Class>
 
-	<!-- Indian Class -->
+	<!-- Indian Class (Matt)-->
 	<owl:Class rdf:ID="Indian">
 		<rdfs:label>Indian</rdfs:label>
 	</owl:Class>
 
-	<!-- Thai Class -->
+	<!-- Thai Class (Matt)-->
 	<owl:Class rdf:ID="Thai">
 		<rdfs:label>Thai</rdfs:label>
 	</owl:Class>
 
-	<!-- Japenese Class -->
+	<!-- Japenese Class (Matt)-->
 	<owl:Class rdf:ID="Japenese">
 		<rdfs:label>Japenese</rdfs:label>
 	</owl:Class>
 
-	<!-- Chinese Class -->
+	<!-- Chinese Class (Matt)-->
 	<owl:Class rdf:ID="Chinese">
 		<rdfs:label>Chinese</rdfs:label>
 	</owl:Class>
 
-	<!-- Spanish Class -->
+	<!-- Spanish Class (Matt)-->
 	<owl:Class rdf:ID="Spanish">
 		<rdfs:label>Spanish</rdfs:label>
 	</owl:Class>
 
-	<!-- Greek Class -->
+	<!-- Greek Class (Matt)-->
 	<owl:Class rdf:ID="Greek">
 		<rdfs:label>Greek</rdfs:label>
 	</owl:Class>
 
-	<!-- Lebanese Class -->
+	<!-- Lebanese Class (Matt)-->
 	<owl:Class rdf:ID="Lebanese">
 		<rdfs:label>Lebanese</rdfs:label>
 	</owl:Class>
 
-	<!-- Mexican Class -->
+	<!-- Mexican Class (Matt)-->
 	<owl:Class rdf:ID="Mexican">
 		<rdfs:label>Mexican</rdfs:label>
 	</owl:Class>
 
-	<!-- Italian Class -->
+	<!-- Italian Class (Matt)-->
 	<owl:Class rdf:ID="Italian">
 		<rdfs:label>Italian</rdfs:label>
 	</owl:Class>
 
-	<!-- MiscStyle Class -->
+	<!-- MiscStyle Class (Matt)-->
 	<owl:Class rdf:ID="MiscStyle">
 		<rdfs:label>Miscellaneous Style</rdfs:label>
 	</owl:Class>
 
-<!-- Property Definitions -->
+	<!-- Temperature Class (Mike)-->
+	<owl:Class rdf:ID="Temperature">
+		<rdfs:label>Temperature</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Hot" />
+			<owl:Class rdf:about="#Cold" />
+			<owl:Class rdf:about="#Room" />
+		</owl:unionOf>
+	</owl:Class>
 
-	<!-- hasIngredients Property -->
+	<!-- Hot Class(Mike)-->
+	<owl:Class rdf:ID="Hot">
+		<rdfs:label>Hot</rdfs:label>
+	</owl:Class>
+
+	<!-- Cold Class(Mike)-->
+	<owl:Class rdf:ID="Cold">
+		<rdfs:label>Cold</rdfs:label>
+	</owl:Class>
+
+	<!-- Room Class(Mike)-->
+	<owl:Class rdf:ID="Room">
+		<rdfs:label>Room</rdfs:label>
+	</owl:Class>
+
+	<!-- Time Class (Mike)-->
+	<owl:Class rdf:ID="Time">
+		<rdfs:label>Time</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Quick" />
+			<owl:Class rdf:about="#FewHours" />
+			<owl:Class rdf:about="#AllNight" />
+		</owl:unionOf>
+	</owl:Class>
+
+	<!-- Quick Class(Mike)-->
+	<owl:Class rdf:ID="Quick">
+		<rdfs:label>Quick</rdfs:label>
+	</owl:Class>
+
+	<!-- FewHours Class(Mike)-->
+	<owl:Class rdf:ID="FewHours">
+		<rdfs:label>FewHours</rdfs:label>
+	</owl:Class>
+
+	<!-- AllNight Class(Mike)-->
+	<owl:Class rdf:ID="AllNight">
+		<rdfs:label>AllNight</rdfs:label>
+	</owl:Class>
+
+	<!-- mealSize Class (Mike)-->
+	<owl:Class rdf:ID="mealSize">
+		<rdfs:label>Size</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Big" />
+			<owl:Class rdf:about="#Average" />
+			<owl:Class rdf:about="#Small" />
+			<owl:Class rdf:about="#Snack" />
+		</owl:unionOf>
+	</owl:Class>
+
+	<!-- Big Class(Mike)-->
+	<owl:Class rdf:ID="Big">
+		<rdfs:label>Big</rdfs:label>
+	</owl:Class>
+
+	<!-- Average Class(Mike)-->
+	<owl:Class rdf:ID="Average">
+		<rdfs:label>Average</rdfs:label>
+	</owl:Class>
+
+	<!-- Small Class(Mike)-->
+	<owl:Class rdf:ID="Small">
+		<rdfs:label>Small</rdfs:label>
+	</owl:Class>
+
+	<!-- Snack Class(Mike)-->
+	<owl:Class rdf:ID="Snack">
+		<rdfs:label>Snack</rdfs:label>
+	</owl:Class>
+
+	<!-- healthStatus Class (Mike)-->
+	<owl:Class rdf:ID="healthStatus">
+		<rdfs:label>Size</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#healthy" />
+			<owl:Class rdf:about="#midHealthy" />
+			<owl:Class rdf:about="#unHealthy" />
+		</owl:unionOf>
+	</owl:Class>
+
+	<!-- healthy Class(Mike)-->
+	<owl:Class rdf:ID="healthy">
+		<rdfs:label>healthy</rdfs:label>
+	</owl:Class>
+
+	<!-- midHealthy Class(Mike)-->
+	<owl:Class rdf:ID="midHealthy">
+		<rdfs:label>midHealthy</rdfs:label>
+	</owl:Class>
+
+	<!-- unHealthy Class(Mike)-->
+	<owl:Class rdf:ID="unHealthy">
+		<rdfs:label>unHealthy</rdfs:label>
+	</owl:Class>
+
+	<!-- foodAllergy Class (Mike)-->
+	<owl:Class rdf:ID="foodAllergy">
+		<rdfs:label>Size</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Nut" />
+			<owl:Class rdf:about="#Berry" />
+			<owl:Class rdf:about="#Lactose" />
+			<owl:Class rdf:about="#Shellfish" />
+		</owl:unionOf>
+	</owl:Class>
+
+	<!-- Nut Class(Mike)-->
+	<owl:Class rdf:ID="Nut">
+		<rdfs:label>Nut</rdfs:label>
+	</owl:Class>
+
+	<!-- Berry Class(Mike)-->
+	<owl:Class rdf:ID="Berry">
+		<rdfs:label>Berry</rdfs:label>
+	</owl:Class>
+
+	<!-- Lactose Class(Mike)-->
+	<owl:Class rdf:ID="Lactose">
+		<rdfs:label>Lactose</rdfs:label>
+	</owl:Class>
+
+	<!-- Shellfish Class(Mike)-->
+	<owl:Class rdf:ID="Shellfish">
+		<rdfs:label>Shellfish</rdfs:label>
+	</owl:Class>
+
+	<!-- Difficulty Class (Mike)-->
+	<owl:Class rdf:ID="Difficulty">
+		<rdfs:label>Difficulty</rdfs:label>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Easy" />
+			<owl:Class rdf:about="#Medium" />
+			<owl:Class rdf:about="#Hard" />
+		</owl:unionOf>
+	</owl:Class>
+
+	<!-- Easy Class(Mike)-->
+	<owl:Class rdf:ID="Easy">
+		<rdfs:label>Easy</rdfs:label>
+	</owl:Class>
+
+	<!-- Medium Class(Mike)-->
+	<owl:Class rdf:ID="Medium">
+		<rdfs:label>Medium</rdfs:label>
+	</owl:Class>
+
+	<!-- Hard Class(Mike)-->
+	<owl:Class rdf:ID="Hard">
+		<rdfs:label>Hard</rdfs:label>
+	</owl:Class>
+
+<!-- Property Definitions (Team)-->
+
+	<!-- hasIngredients Property (Matt)-->
 	<owl:ObjectProperty rdf:about="hasIngredients">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Food"/>
 	</owl:ObjectProperty>
 
-	<!-- dividedInto Property -->
+	<!-- dividedInto Property (Matt)-->
 	<owl:ObjectProperty rdf:about="dividedInto">
 		<rdfs:domain rdf:resource="#Food"/>
 		<rdfs:range rdf:resource="#FoodGroups"/>
 	</owl:ObjectProperty>
 
-	<!-- isClassifiedAs Property -->
+	<!-- isClassifiedAs Property (Matt)-->
 	<owl:ObjectProperty rdf:about="isClassifiedAs">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Cuisine"/>
 	</owl:ObjectProperty>
 
+	<!-- hasTemp Property (Mike)-->
+	<owl:ObjectProperty rdf:about="hasTemp">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#Temperature"/>
+	</owl:ObjectProperty>
+
+	<!-- hasTime Property (Mike)-->
+	<owl:ObjectProperty rdf:about="hasTime">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#Time"/>
+	</owl:ObjectProperty>
+
+	<!-- hasSize Property (Mike)-->
+	<owl:ObjectProperty rdf:about="hasSize">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#mealSize"/>
+	</owl:ObjectProperty>
+
+	<!-- isHealthy Property (Mike)-->
+	<owl:ObjectProperty rdf:about="isHealthy">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<!-- We may want to consider linking this to the foods as well. (Mike)-->
+		<rdfs:range rdf:resource="#healthStatus"/>
+	</owl:ObjectProperty>
+
+	<!-- hasAllergy Property (Mike)-->
+	<owl:ObjectProperty rdf:about="hasAllergy">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#foodAllergy"/>
+	</owl:ObjectProperty>
+
+	<!-- hasDifficulty Property (Mike)-->
+	<owl:ObjectProperty rdf:about="hasDifficulty">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#Difficulty"/>
+	</owl:ObjectProperty>
 </rdf:RDF>
