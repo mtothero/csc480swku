@@ -1,4 +1,5 @@
-csc480swku
-==========
+Food Recipe Ontology
+====================
 
-Semantic Web - CSC480 - KU
+Domain: Food Recipes  
+Scope: Given what's in the food pantry and what kitchen appliances are available, what meals can be made.
