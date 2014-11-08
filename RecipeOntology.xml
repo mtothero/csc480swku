@@ -358,6 +358,64 @@
 		<rdfs:label>Hard</rdfs:label>
 	</owl:Class>
 
+    <!-- KitchenTools Class(Ruben) -->
+    <owl:Class rdf:ID="KitchenTools">
+        <owl:unionOf rdf:parseType="Collection">
+            <owl:Class rdf:about="#Utensils"/>
+            <owl:Class rdf:about="#MixingBowls"/>
+            <owl:Class rdf:about="#MeasuringTools"/>
+            <owl:Class rdf:about="#Appliances"/>
+            <owl:Class rdf:about="#Cookware"/>
+        </owl:unionOf>
+        <rdfs:label>KitchenTools</rdfs:label>
+    </owl:Class>
+    
+    <!-- Utensils Class(Ruben) -->
+    <owl:Class rdf:ID="Utensils">
+        <owl:disjointWith rdf:resource="#MixingBowls"/>
+        <owl:disjointWith rdf:resource="#MeasuringTools"/>
+        <owl:disjointWith rdf:resource="#Appliances"/>
+        <owl:disjointWith rdf:resource="#Cookware"/>
+        <rdfs:label>Utensils</rdfs:label>
+    </owl:Class>
+    
+    <!-- MixingBowls Class(Ruben) -->
+    <owl:Class rdf:ID="MixingBowls">
+        <owl:disjointWith rdf:resource="#Utensils"/>
+        <owl:disjointWith rdf:resource="#MeasuringTools"/>
+        <owl:disjointWith rdf:resource="#Appliances"/>
+        <owl:disjointWith rdf:resource="#Cookware"/>
+        <rdfs:label>MixingBowls</rdfs:label>
+    </owl:Class>
+    
+    <!-- MeasuringTools Class(Ruben) -->
+    <owl:Class rdf:ID="MeasuringTools">
+        <owl:disjointWith rdf:resource="#Utensils"/>
+        <owl:disjointWith rdf:resource="#MixingBowls"/>
+        <owl:disjointWith rdf:resource="#Appliances"/>
+        <owl:disjointWith rdf:resource="#Cookware"/>
+        <rdfs:label>MeasuringTools</rdfs:label>
+    </owl:Class>
+    
+    <!-- Appliances Class(Ruben) -->
+    <owl:Class rdf:ID="Appliances">
+        <owl:disjointWith rdf:resource="#Utensils"/>
+        <owl:disjointWith rdf:resource="#MixingBowls"/>
+        <owl:disjointWith rdf:resource="#MeasuringTools"/>
+        <owl:disjointWith rdf:resource="#Cookware"/>
+        <rdfs:label>Appliances</rdfs:label>
+    <owl:Class>
+    
+    <!-- Cookware Class(Ruben) -->
+    <owl:Class rdf:ID="Cookware">
+        <owl:disjointWith rdf:resource="#Utensils"/>
+        <owl:disjointWith rdf:resource="#MixingBowls"/>
+        <owl:disjointWith rdf:resource="#MeasuringTools"/>
+        <owl:disjointWith rdf:resource="#Appliances"/>
+        <rdfs:label>Cookware</rdfs:label>
+    </owl:Class>
+    
+    
 <!-- Property Definitions (Team)-->
 
 	<!-- hasIngredients Property (Matt)-->
@@ -414,4 +472,10 @@
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Difficulty"/>
 	</owl:ObjectProperty>
+    
+    <!-- uses Property(Ruben) -->
+    <owl:ObjectProperty rdf:about="uses">
+        <rdfs:domain rdf:resource="#Recipe"/>
+        <rdfs:domain rdf:resource="#KitchenTools"/>
+    </owl:ObjectProperty>
 </rdf:RDF>
