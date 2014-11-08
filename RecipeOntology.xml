@@ -221,16 +221,6 @@
 		<rdfs:label>Room</rdfs:label>
 	</owl:Class>
 
-	<!-- Time Class (Mike)-->
-	<owl:Class rdf:ID="Time">
-		<rdfs:label>Time</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#Quick" />
-			<owl:Class rdf:about="#FewHours" />
-			<owl:Class rdf:about="#AllNight" />
-		</owl:unionOf>
-	</owl:Class>
-
 	<!-- Quick Class(Mike)-->
 	<owl:Class rdf:ID="Quick">
 		<rdfs:label>Quick</rdfs:label>
@@ -279,7 +269,7 @@
 
 	<!-- healthStatus Class (Mike)-->
 	<owl:Class rdf:ID="healthStatus">
-		<rdfs:label>Size</rdfs:label>
+		<rdfs:label>healthStatus</rdfs:label>
 		<owl:unionOf rdf:parseType="Collection">
 			<owl:Class rdf:about="#healthy" />
 			<owl:Class rdf:about="#midHealthy" />
@@ -304,7 +294,7 @@
 
 	<!-- foodAllergy Class (Mike)-->
 	<owl:Class rdf:ID="foodAllergy">
-		<rdfs:label>Size</rdfs:label>
+		<rdfs:label>foodAllergy</rdfs:label>
 		<owl:unionOf rdf:parseType="Collection">
 			<owl:Class rdf:about="#Nut" />
 			<owl:Class rdf:about="#Berry" />
@@ -472,6 +462,12 @@
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Difficulty"/>
 	</owl:ObjectProperty>
+    
+    <!-- takes Property(Group Decision) -->
+    <owl:ObjectProperty rdf:about="takes">
+        <rdfs:domain rdf:resource="#Recipe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> <!-- literal value is minutes/hours-->
+    </owl:ObjectProperty>
     
     <!-- uses Property(Ruben) -->
     <owl:ObjectProperty rdf:about="uses">
