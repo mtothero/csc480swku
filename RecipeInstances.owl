@@ -3,12 +3,14 @@
 /************************************************************/
 /* Author: Matt Tothero, Ruben Swyers, Mike Pandel
 /* Creation Date: November 9, 2014
-/* Modification Date: November 9, 2014
+/* Modification Date: November 21, 2014
 /* Course: CSC480 010
 /* Professor Name: Dr. Frye
 /* Assignment: Main Project
 /* Filename: RecipeInstances.xml
 /* Purpose: The following are instances that are created from the Food ontology.
+/*			Mike's and Matt's instances will be loaded from this owl file. Ruben's instances
+/* 			will be loaded at runtime through a txt file. 
 /************************************************************/
 -->
 
@@ -16,9 +18,9 @@
       xmlns:owl = "http://www.w3.org/2002/07/owl#"
       xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
       xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-      xmlns:recipee="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml#">
+      xmlns:recipee="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.owl#">
 
-
+<!-- Matt Recipe-->
 <!-- Peanut Butter and Jelly Recipe-->
 <recipee:recipe rdf:ID="PBJ">
   <recipee:name>Peanut Butter and Jelly Sandwich</recipee:name>
@@ -124,7 +126,114 @@
   <recipee:takes>60</recipee:takes>
 </recipee:recipe>
 
+<!-- Mike Recipe-->
+<!-- Apple Chicken Quesadilla -->
+<recipee:recipe rdf:ID="Apple_Chicken_Quesadilla">
+  <recipee:name>Apple Chicken Quesadilla</recipee:name>
+  <recipee:hasIngredients rdf:resource="#Totillas"/>
+  <recipee:hasIngredients rdf:resource="#Jelly"/>
+  <recipee:hasIngredients rdf:resource="#LeanChicken"/>
+  <recipee:hasIngredients rdf:resource="#CheddarCheese"/>
+  <recipee:hasIngredients rdf:resource="#Apple"/>
+  <recipee:hasIngredients rdf:resource="#Salsa"/>
+  <recipee:isClassifiedAs rdf:resource="#MiscStyle"/>
+  <recipee:hasTemp rdf:resource="#Hot"/>
+  <recipee:hasTime rdf:resource="#Quick"/>
+  <recipee:hasSize rdf:resource="#Small"/>
+  <recipee:isHealthy rdf:resource="#healthy"/>
+  <recipee:hasDifficulty rdf:resource="#Easy"/>
+  <recipee:uses rdf:resource="#Utensils"/>
+  <recipee:uses rdf:resource="#Cookware"/>
+  <recipee:uses rdf:resource="#Appliances"/>
+  <recipee:takes>5</recipee:takes>
+</recipee:recipe>
+
+<!-- Buttery Tomato Pasta -->
+<recipee:recipe rdf:ID="Buttery_Tomato_Pasta">
+  <recipee:name>Buttery Tomato Pasta</recipee:name>
+  <recipee:hasIngredients rdf:resource="#Pasta"/>
+  <recipee:hasIngredients rdf:resource="#Tomatoes"/>
+  <recipee:hasIngredients rdf:resource="#Sugar"/>
+  <recipee:hasIngredients rdf:resource="#Salt"/>
+  <recipee:hasIngredients rdf:resource="#Pepper"/>
+  <recipee:hasIngredients rdf:resource="#Salsa"/>
+  <recipee:isClassifiedAs rdf:resource="#Italian"/>
+  <recipee:hasTemp rdf:resource="#Hot"/>
+  <recipee:hasTime rdf:resource="#Quick"/>
+  <recipee:hasSize rdf:resource="#Average"/>
+  <recipee:isHealthy rdf:resource="#healthy"/>
+  <recipee:hasDifficulty rdf:resource="#Italian"/>
+  <recipee:uses rdf:resource="#Utensils"/>
+  <recipee:uses rdf:resource="#MixingBowls"/>
+  <recipee:uses rdf:resource="#Cookware"/>
+  <recipee:uses rdf:resource="#Appliances"/>
+  <recipee:takes>15</recipee:takes>
+</recipee:recipe>
+
+<!-- Piergoies -->
+<recipee:recipe rdf:ID="Pierogies">
+  <recipee:name>Pierogies</recipee:name>
+  <recipee:hasIngredients rdf:resource="#AllPurposeFlour"/>
+  <recipee:hasIngredients rdf:resource="#Water"/>
+  <recipee:hasIngredients rdf:resource="#AnyCheese"/>
+  <recipee:hasIngredients rdf:resource="#Salt"/>
+  <recipee:hasIngredients rdf:resource="#Pepper"/>
+  <recipee:hasIngredients rdf:resource="#Egg"/>
+  <recipee:hasIngredients rdf:resource="#Potatoes"/>
+  <recipee:hasDifficulty rdf:resource="#MiscStyle"/>
+  <recipee:hasTemp rdf:resource="#Hot"/>
+  <recipee:hasTime rdf:resource="#FewHours"/>
+  <recipee:hasSize rdf:resource="#Average"/>
+  <recipee:isHealthy rdf:resource="#unHealthy"/>
+  <recipee:hasDifficulty rdf:resource="#Hard"/>
+  <recipee:uses rdf:resource="#Utensils"/>
+  <recipee:uses rdf:resource="#MixingBowls"/>
+  <recipee:uses rdf:resource="#Cookware"/>
+  <recipee:takes>90</recipee:takes>
+</recipee:recipe>
+
+<!-- Chicken Cesar Salad -->
+<recipee:recipe rdf:ID="Chicken_Cesar_Salad">
+  <recipee:name>Chicken Cesar Salad</recipee:name>
+  <recipee:hasIngredients rdf:resource="#LeanChicken"/>
+  <recipee:hasIngredients rdf:resource="#Garlic"/>
+  <recipee:hasIngredients rdf:resource="#ParmesanCheese"/>
+  <recipee:hasIngredients rdf:resource="#Croutons"/>
+  <recipee:hasIngredients rdf:resource="#VegetableOil"/>
+  <recipee:hasIngredients rdf:resource="#Salt"/>
+  <recipee:hasIngredients rdf:resource="#WorcestershireSauce"/>
+  <recipee:hasIngredients rdf:resource="#GroundMustard"/>
+  <recipee:hasDifficulty rdf:resource="#Italian"/>
+  <recipee:hasTemp rdf:resource="#Cold"/>
+  <recipee:hasTime rdf:resource="#Quick"/>
+  <recipee:hasSize rdf:resource="#Average"/>
+  <recipee:isHealthy rdf:resource="#Healthy"/>
+  <recipee:hasDifficulty rdf:resource="#Medium"/>
+  <recipee:uses rdf:resource="#Utensils"/>
+  <recipee:uses rdf:resource="#MixingBowls"/>
+  <recipee:takes>15</recipee:takes>
+</recipee:recipe>
+
+<!-- Grilled Cheese Sandwhich -->
+<recipee:recipe rdf:ID="Grilled_Cheese_Sandwhich">
+  <recipee:name>Grilled Cheese Sandwhich</recipee:name>
+  <recipee:hasIngredients rdf:resource="#Bread"/>
+  <recipee:hasIngredients rdf:resource="#AnyCheese"/>
+  <recipee:hasIngredients rdf:resource="#Butter"/>
+  <recipee:hasDifficulty rdf:resource="#MiscStyle"/>
+  <recipee:hasTemp rdf:resource="#Hot"/>
+  <recipee:hasTime rdf:resource="#Quick"/>
+  <recipee:hasSize rdf:resource="#Small"/>
+  <recipee:isHealthy rdf:resource="#unHealthy"/>
+  <recipee:hasDifficulty rdf:resource="#Easy"/>
+  <recipee:uses rdf:resource="#Utensils"/>
+  <recipee:uses rdf:resource="#Cookware"/>
+  <recipee:takes>5</recipee:takes>
+</recipee:recipe>
+<!-- Ruben Recipe-->
+
 <!-- Food Instances -->
+<!-- Matt Instances-->
 <recipee:Vegetables rdf:ID="Coleslaw"/>
 <recipee:MiscFoods rdf:ID="SoySauce"/>
 <recipee:Vegetables rdf:ID="Ginger"/>
@@ -150,5 +259,22 @@
 <recipee:Dairy rdf:ID="Mozzarella"/>
 <recipee:ProteinFoods rdf:ID="GroundBeef"/>
 <recipee:Oils rdf:ID="OliveOil"/>
-
+<!-- Mike Instances-->
+<recipee:ProteinFoods rdf:ID="LeanChicken"/>
+<recipee:Dairy rdf:ID="CheddarCheese"/>
+<recipee:Fruits rdf:ID="Apple"/>
+<recipee:Vegetables rdf:ID="Salsa"/>
+<recipee:Vegetables rdf:ID="Tomatoes"/>
+<recipee:MiscFoods rdf:ID="Sugar"/>
+<recipee:MiscFoods rdf:ID="Salt"/>
+<recipee:MiscFoods rdf:ID="Pepper"/>
+<recipee:MiscFoods rdf:ID="Basil"/>
+<recipee:MiscFoods rdf:ID="Water"/>
+<recipee:ProteinFoods rdf:ID="Egg"/>
+<recipee:Vegetables rdf:ID="Potatoes"/>
+<recipee:Dairy rdf:ID="AnyCheese"/>
+<recipee:Dairy rdf:ID="ParmesanCheese"/>
+<recipee:Grains rdf:ID="Croutons"/>
+<recipee:MiscFoods rdf:ID="GroundMustard"/>
+<!-- Ruben Instances-->
 </rdf:RDF>
