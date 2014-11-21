@@ -13,12 +13,17 @@
 /************************************************************/
 -->
 
+<!DOCTYPE rdf:RDF [
+		<!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
+		<!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
+]>
+
 <rdf:RDF
 			xmlns:owl = "http://www.w3.org/2002/07/owl#"
 			xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 			xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-			xmlns:recipee="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml#"
-			xml:base="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.xml">
+			xmlns:recipee="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.owl#"
+			xml:base="http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.owl">
 
 <!-- Class Definitions (Team)-->
 
@@ -409,69 +414,121 @@
 <!-- Property Definitions (Team)-->
 
 	<!-- hasIngredients Property (Matt)-->
-	<owl:ObjectProperty rdf:about="hasIngredients">
+	<owl:ObjectProperty rdf:ID="hasIngredients">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Food"/>
 	</owl:ObjectProperty>
 
-	<!-- dividedInto Property (Matt)-->
-	<owl:ObjectProperty rdf:about="dividedInto">
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#hasIngredients" />
+		<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+	</owl:Restriction>
+
+	<!-- divIdedInto Property (Matt)-->
+	<owl:ObjectProperty rdf:ID="dividedInto">
 		<rdfs:domain rdf:resource="#Food"/>
 		<rdfs:range rdf:resource="#FoodGroups"/>
 	</owl:ObjectProperty>
 
 	<!-- isClassifiedAs Property (Matt)-->
-	<owl:ObjectProperty rdf:about="isClassifiedAs">
+	<owl:ObjectProperty rdf:ID="isClassifiedAs">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Cuisine"/>
 	</owl:ObjectProperty>
 
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#isClassifiedAs" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
+
 	<!-- hasTemp Property (Mike)-->
-	<owl:ObjectProperty rdf:about="hasTemp">
+	<owl:ObjectProperty rdf:ID="hasTemp">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Temperature"/>
 	</owl:ObjectProperty>
 
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#hasTemp" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
+
 	<!-- hasTime Property (Mike)-->
-	<owl:ObjectProperty rdf:about="hasTime">
+	<owl:ObjectProperty rdf:ID="hasTime">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Time"/>
 	</owl:ObjectProperty>
 
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#hasTime" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
+
 	<!-- hasSize Property (Mike)-->
-	<owl:ObjectProperty rdf:about="hasSize">
+	<owl:ObjectProperty rdf:ID="hasSize">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#mealSize"/>
 	</owl:ObjectProperty>
 
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#hasSize" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
+
 	<!-- isHealthy Property (Mike)-->
-	<owl:ObjectProperty rdf:about="isHealthy">
+	<owl:ObjectProperty rdf:ID="isHealthy">
 		<rdfs:domain rdf:resource="#Recipe"/>
-		<!-- We may want to consider linking this to the foods as well. (Mike)-->
+		<!-- We may want to consIder linking this to the foods as well. (Mike)-->
 		<rdfs:range rdf:resource="#healthStatus"/>
 	</owl:ObjectProperty>
 
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#isHealthy" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
+
 	<!-- hasAllergy Property (Mike)-->
-	<owl:ObjectProperty rdf:about="hasAllergy">
+	<owl:ObjectProperty rdf:ID="hasAllergy">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#foodAllergy"/>
 	</owl:ObjectProperty>
 
 	<!-- hasDifficulty Property (Mike)-->
-	<owl:ObjectProperty rdf:about="hasDifficulty">
+	<owl:ObjectProperty rdf:ID="hasDifficulty">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<rdfs:range rdf:resource="#Difficulty"/>
 	</owl:ObjectProperty>
 
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#hasDifficulty" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
+
 	<!-- takes Property(Group Decision) -->
-	<owl:ObjectProperty rdf:about="takes">
+	<owl:DatatypeProperty rdf:ID="takes">
 			<rdfs:domain rdf:resource="#Recipe"/>
 			<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> <!-- literal value is minutes/hours-->
-	</owl:ObjectProperty>
+	</owl:DatatypeProperty>
+
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#takes" />
+		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+	</owl:Restriction>
 
 	<!-- uses Property(Ruben) -->
-	<owl:ObjectProperty rdf:about="uses">
+	<owl:ObjectProperty rdf:ID="uses">
 			<rdfs:domain rdf:resource="#Recipe"/>
-			<rdfs:domain rdf:resource="#KitchenTools"/>
+			<rdfs:range rdf:resource="#KitchenTools"/>
 	</owl:ObjectProperty>
+
+	<owl:Restriction>
+		<owl:onProperty rdf:resource="#uses" />
+		<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+	</owl:Restriction>
+
+	<!-- Name Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="name">
+			<rdfs:domain rdf:resource="#Recipe"/>
+			<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+			<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
 </rdf:RDF>
