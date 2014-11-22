@@ -6,13 +6,92 @@ INGREDIENT,Jelly
 INGREDIENT,PeanutButter
 CLASSIFICATION,MiscStyle
 TEMP,Room
-TIME,Quick
 SIZE,Small
 NUTRITIONAL,healthy
 ALLERGY,Nut
 DIFFICULTY,Easy
 USES,Utensils
 TAKES,5
+--END,NEW RECIPE--
+--BEGIN,NEW RECIPE--
+ID,Spaghetti
+NAME,Spaghetti
+INGREDIENT,Pasta
+INGREDIENT,SpaghettiSauce
+INGREDIENT,SpaghettiSauce
+CLASSIFICATION,Italian
+TEMP,Hot
+SIZE,Average
+NUTRITIONAL,healthy
+DIFFICULTY,Medium
+USES,Utensils
+USES,MixingBowls
+USES,Cookware
+USES,Appliances
+TAKES,60
+--END,NEW RECIPE--
+--BEGIN,NEW RECIPE--
+ID,Enchiladas
+NAME,Enchiladas
+INGREDIENT,Tortillas
+INGREDIENT,RedEnchiladaSauce
+INGREDIENT,Mozzarella
+INGREDIENT,GroundBeef
+INGREDIENT,OliveOil
+CLASSIFICATION,MiscStyle
+TEMP,Hot
+SIZE,Average
+NUTRITIONAL,healthy
+DIFFICULTY,Medium
+USES,Utensils
+USES,MixingBowls
+USES,Cookware
+USES,Appliances
+TAKES,60
+--END,NEW RECIPE--
+--BEGIN,NEW RECIPE--
+ID,FrenchOnionSoup
+NAME,French Onion Soup
+INGREDIENT,BeefBroth
+INGREDIENT,BeefConsume
+INGREDIENT,Onion
+INGREDIENT,Butter
+INGREDIENT,Garlic
+INGREDIENT,WorcestershireSauce
+INGREDIENT,Swiss
+INGREDIENT,FrenchBread
+CLASSIFICATION,French
+TEMP,Hot
+SIZE,Average
+NUTRITIONAL,healthy
+DIFFICULTY,Easy
+USES,Utensils
+USES,Cookware
+USES,Appliances
+TAKES,30
+--END,NEW RECIPE--
+--BEGIN,NEW RECIPE--
+ID,EggRolls
+NAME,Egg Rolls
+INGREDIENT,Coleslaw
+INGREDIENT,SoySauce
+INGREDIENT,Ginger
+INGREDIENT,EggRollWrappers
+INGREDIENT,AllPurposeFlour
+INGREDIENT,VegetableOil
+INGREDIENT,GroundBeef
+INGREDIENT,Onion
+INGREDIENT,Garlic
+CLASSIFICATION,Chinese
+TEMP,Hot
+SIZE,Average
+NUTRITIONAL,healthy
+DIFFICULTY,Medium
+USES,Utensils
+USES,Cookware
+USES,Appliances
+USES,MixingBowls
+TAKES,60
 --END,NEW RECIPE--
 --BEGIN,NEW RECIPE--
 ID,SpanishRice
@@ -67,7 +146,7 @@ USES,Utensils
 USES,Cookware
 CLASSIFICATION,MiscStyle
 TEMP,Cold
-SIZZE,Big
+SIZE,Big
 NUTRITIONAL,healthy
 DIFFICULTY,Easy
 USES,Utensils

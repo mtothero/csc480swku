@@ -226,21 +226,6 @@
 		<rdfs:label>Room</rdfs:label>
 	</owl:Class>
 
-	<!-- Quick Class(Mike)-->
-	<owl:Class rdf:ID="Quick">
-		<rdfs:label>Quick</rdfs:label>
-	</owl:Class>
-
-	<!-- FewHours Class(Mike)-->
-	<owl:Class rdf:ID="FewHours">
-		<rdfs:label>FewHours</rdfs:label>
-	</owl:Class>
-
-	<!-- AllNight Class(Mike)-->
-	<owl:Class rdf:ID="AllNight">
-		<rdfs:label>AllNight</rdfs:label>
-	</owl:Class>
-
 	<!-- mealSize Class (Mike)-->
 	<owl:Class rdf:ID="mealSize">
 		<rdfs:label>Size</rdfs:label>
@@ -449,17 +434,6 @@
 
 	<owl:Restriction>
 		<owl:onProperty rdf:resource="#hasTemp" />
-		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
-	</owl:Restriction>
-
-	<!-- hasTime Property (Mike)-->
-	<owl:ObjectProperty rdf:ID="hasTime">
-		<rdfs:domain rdf:resource="#Recipe"/>
-		<rdfs:range rdf:resource="#Time"/>
-	</owl:ObjectProperty>
-
-	<owl:Restriction>
-		<owl:onProperty rdf:resource="#hasTime" />
 		<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
 	</owl:Restriction>
 
