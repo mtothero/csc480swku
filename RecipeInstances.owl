@@ -230,8 +230,6 @@
   <recipee:uses rdf:resource="#Cookware"/>
   <recipee:takes>5</recipee:takes>
 </recipee:recipe>
-<!-- Ruben Recipe-->
-
 <!-- Food Instances -->
 <!-- Matt Instances-->
 <recipee:Vegetables rdf:ID="Coleslaw"/>
@@ -277,4 +275,20 @@
 <recipee:Grains rdf:ID="Croutons"/>
 <recipee:MiscFoods rdf:ID="GroundMustard"/>
 <!-- Ruben Instances-->
+<recipee:ProteinFoods rdf:ID="PidgeonBeans"/>
+<recipee:ProteinFoods rdf:ID="KidneyBeans"/>
+<recipee:ProteinFoods rdf:ID="PintoBeans"/>
+<recipee:ProteinFoods rdf:ID="Ham"/>
+<recipee:Grains rdf:ID="Rice"/>
+<recipee:MiscFoods rdf:ID="Sazon"/>
+<recipee:MiscFoods rdf:ID="ChickenBulleon"/>
+<recipee:MiscFoods rdf:ID="Adobo"/>
+<recipee:MiscFoods rdf:ID="Cumin"/>
+<recipee:MiscFoods rdf:ID="ChiliSpice"/>
+<recipee:MiscFoods rdf:ID="Beer"/>
+<recipee:MiscFoods rdf:ID="ItalianDressing"/>
+<recipee:ProteinFoods rdf:ID="Pepperoni"/>
+<recipee:Dairy rdf:ID="CheeseCubes"/>
+<recipee:Vegetables rdf:ID="RedPepper"/>
+<recipee:Vegetables rdf:ID="GreenPepper"/>
 </rdf:RDF>
