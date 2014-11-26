@@ -3,7 +3,7 @@
 /************************************************************/
 /* Author: Matt Tothero, Ruben Swyers, Mike Pandel
 /* Creation Date: November 9, 2014
-/* Modification Date: November 21, 2014
+/* Modification Date: November 26, 2014
 /* Course: CSC480 010
 /* Professor Name: Dr. Frye
 /* Assignment: Main Project
@@ -24,7 +24,9 @@
 <!-- Apple Chicken Quesadilla -->
 <recipee:recipe rdf:ID="Apple_Chicken_Quesadilla">
   <recipee:name>Apple Chicken Quesadilla</recipee:name>
-  <recipee:hasIngredients rdf:resource="#Totillas"/>
+  <recipee:totalCalories>251</recipee:totalCalories>
+  <recipee:occasion>Side Order</recipee:occasion>
+  <recipee:hasIngredients rdf:resource="#Tortillas"/>
   <recipee:hasIngredients rdf:resource="#Jelly"/>
   <recipee:hasIngredients rdf:resource="#LeanChicken"/>
   <recipee:hasIngredients rdf:resource="#CheddarCheese"/>
@@ -33,7 +35,8 @@
   <recipee:isClassifiedAs rdf:resource="#MiscStyle"/>
   <recipee:hasTemp rdf:resource="#Hot"/>
   <recipee:hasSize rdf:resource="#Small"/>
-  <recipee:isHealthy rdf:resource="#healthy"/>
+  <recipee:isHealthy rdf:resource="#Healthy"/>
+  <recipee:FoodAllergy rdf:resource="#Gluten"/>
   <recipee:hasDifficulty rdf:resource="#Easy"/>
   <recipee:uses rdf:resource="#Utensils"/>
   <recipee:uses rdf:resource="#Cookware"/>
@@ -44,6 +47,8 @@
 <!-- Buttery Tomato Pasta -->
 <recipee:recipe rdf:ID="Buttery_Tomato_Pasta">
   <recipee:name>Buttery Tomato Pasta</recipee:name>
+  <recipee:totalCalories>137</recipee:totalCalories>
+  <recipee:occasion>Side Order</recipee:occasion>
   <recipee:hasIngredients rdf:resource="#Pasta"/>
   <recipee:hasIngredients rdf:resource="#Tomatoes"/>
   <recipee:hasIngredients rdf:resource="#Sugar"/>
@@ -53,7 +58,8 @@
   <recipee:isClassifiedAs rdf:resource="#Italian"/>
   <recipee:hasTemp rdf:resource="#Hot"/>
   <recipee:hasSize rdf:resource="#Average"/>
-  <recipee:isHealthy rdf:resource="#healthy"/>
+  <recipee:isHealthy rdf:resource="#Healthy"/>
+  <recipee:FoodAllergy rdf:resource="#Gluten"/>
   <recipee:hasDifficulty rdf:resource="#Italian"/>
   <recipee:uses rdf:resource="#Utensils"/>
   <recipee:uses rdf:resource="#MixingBowls"/>
@@ -65,6 +71,9 @@
 <!-- Piergoies -->
 <recipee:recipe rdf:ID="Pierogies">
   <recipee:name>Pierogies</recipee:name>
+  <recipee:otherName>Kalduny</recipee:otherName>
+  <recipee:totalCalories>170</recipee:totalCalories>
+  <recipee:occasion>Side Order</recipee:occasion>
   <recipee:hasIngredients rdf:resource="#AllPurposeFlour"/>
   <recipee:hasIngredients rdf:resource="#Water"/>
   <recipee:hasIngredients rdf:resource="#AnyCheese"/>
@@ -75,7 +84,8 @@
   <recipee:hasDifficulty rdf:resource="#MiscStyle"/>
   <recipee:hasTemp rdf:resource="#Hot"/>
   <recipee:hasSize rdf:resource="#Average"/>
-  <recipee:isHealthy rdf:resource="#unHealthy"/>
+  <recipee:isHealthy rdf:resource="#Unhealthy"/>
+  <recipee:FoodAllergy rdf:resource="#Gluten"/>
   <recipee:hasDifficulty rdf:resource="#Hard"/>
   <recipee:uses rdf:resource="#Utensils"/>
   <recipee:uses rdf:resource="#MixingBowls"/>
@@ -84,8 +94,10 @@
 </recipee:recipe>
 
 <!-- Chicken Cesar Salad -->
-<recipee:recipe rdf:ID="Chicken_Cesar_Salad">
-  <recipee:name>Chicken Cesar Salad</recipee:name>
+<recipee:recipe rdf:ID="Chicken_Caesar_Salad">
+  <recipee:name>Chicken Caesar Salad</recipee:name>
+  <recipee:totalCalories>264</recipee:totalCalories>
+  <recipee:occasion>Lunch</recipee:occasion>
   <recipee:hasIngredients rdf:resource="#LeanChicken"/>
   <recipee:hasIngredients rdf:resource="#Garlic"/>
   <recipee:hasIngredients rdf:resource="#ParmesanCheese"/>
@@ -105,8 +117,10 @@
 </recipee:recipe>
 
 <!-- Grilled Cheese Sandwhich -->
-<recipee:recipe rdf:ID="Grilled_Cheese_Sandwhich">
-  <recipee:name>Grilled Cheese Sandwhich</recipee:name>
+<recipee:recipe rdf:ID="Grilled_Cheese_Sandwich">
+  <recipee:name>Grilled Cheese Sandwich</recipee:name>
+  <recipee:totalCalories>291</recipee:totalCalories>
+  <recipee:occasion>Lunch</recipee:occasion>
   <recipee:hasIngredients rdf:resource="#Bread"/>
   <recipee:hasIngredients rdf:resource="#AnyCheese"/>
   <recipee:hasIngredients rdf:resource="#Butter"/>
@@ -114,6 +128,7 @@
   <recipee:hasTemp rdf:resource="#Hot"/>
   <recipee:hasSize rdf:resource="#Small"/>
   <recipee:isHealthy rdf:resource="#unHealthy"/>
+  <recipee:FoodAllergy rdf:resource="#Gluten"/>
   <recipee:hasDifficulty rdf:resource="#Easy"/>
   <recipee:uses rdf:resource="#Utensils"/>
   <recipee:uses rdf:resource="#Cookware"/>
@@ -142,7 +157,7 @@
   <recipee:Grains rdf:ID="Bread"/>
   <recipee:Fruits rdf:ID="Jelly"/>
   <recipee:ProteinFoods rdf:ID="PeanutButter"/>
-  <recipee:Grains rdf:ID="Totillas"/>
+  <recipee:Grains rdf:ID="Tortillas"/>
   <recipee:Vegetables rdf:ID="RedEnchiladaSauce"/>
   <recipee:Dairy rdf:ID="Mozzarella"/>
   <recipee:ProteinFoods rdf:ID="GroundBeef"/>

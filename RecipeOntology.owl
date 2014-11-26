@@ -3,7 +3,7 @@
 /************************************************************/
 /* Author: Matt Tothero, Ruben Swyers, Mike Pandel
 /* Creation Date: October 26, 2014
-/* Modification Date: November 9, 2014
+/* Modification Date: November 26, 2014
 /* Course: CSC480 010
 /* Professor Name: Dr. Frye
 /* Assignment: Main Project
@@ -54,6 +54,7 @@
 	<!-- Fruits Class (Matt)-->
 	<owl:Class rdf:ID="Fruits">
 		<rdfs:label>Fruits</rdfs:label>
+		<recipee:includes>any fruit or 100% fruit juice</recipee:includes>
 		<owl:disjointWith rdf:resource="#Vegetables" />
 		<owl:disjointWith rdf:resource="#Grains" />
 		<owl:disjointWith rdf:resource="#ProteinFoods" />
@@ -65,6 +66,7 @@
 	<!-- Vegetables Class (Matt)-->
 	<owl:Class rdf:ID="Vegetables">
 		<rdfs:label>Vegetables</rdfs:label>
+		<recipee:includes>any vegetable or 100% vegetable juice</recipee:includes>
 		<owl:disjointWith rdf:resource="#Fruits" />
 		<owl:disjointWith rdf:resource="#Grains" />
 		<owl:disjointWith rdf:resource="#ProteinFoods" />
@@ -76,6 +78,7 @@
 	<!-- Grains Class (Matt)-->
 	<owl:Class rdf:ID="Grains">
 		<rdfs:label>Grains</rdfs:label>
+		<recipee:includes>any food made from wheat, rice, oats, cornmeal, barley or another cereal grain</recipee:includes>
 		<owl:disjointWith rdf:resource="#Vegetables" />
 		<owl:disjointWith rdf:resource="#Fruits" />
 		<owl:disjointWith rdf:resource="#ProteinFoods" />
@@ -87,6 +90,7 @@
 	<!-- ProteinFoods Class (Matt)-->
 	<owl:Class rdf:ID="ProteinFoods">
 		<rdfs:label>Protein Foods</rdfs:label>
+		<recipee:includes>all foods made from meat, poultry, seafood, beans and peas, eggs, processed soy products, nuts, and seeds</recipee:includes>
 		<owl:disjointWith rdf:resource="#Vegetables" />
 		<owl:disjointWith rdf:resource="#Grains" />
 		<owl:disjointWith rdf:resource="#Fruits" />
@@ -98,6 +102,7 @@
 	<!-- Dairy Class (Matt)-->
 	<owl:Class rdf:ID="Dairy">
 		<rdfs:label>Dairy</rdfs:label>
+		<recipee:includes>all fluid milk products and many foods made from milk</recipee:includes>
 		<owl:disjointWith rdf:resource="#Vegetables" />
 		<owl:disjointWith rdf:resource="#Grains" />
 		<owl:disjointWith rdf:resource="#ProteinFoods" />
@@ -109,6 +114,7 @@
 	<!-- Oils Class (Matt)-->
 	<owl:Class rdf:ID="Oils">
 		<rdfs:label>Oils</rdfs:label>
+		<recipee:includes>all fats that are liquid at room temperature</recipee:includes>
 		<owl:disjointWith rdf:resource="#Vegetables" />
 		<owl:disjointWith rdf:resource="#Grains" />
 		<owl:disjointWith rdf:resource="#ProteinFoods" />
@@ -120,6 +126,7 @@
 	<!-- MiscFoods Class (Matt)-->
 	<owl:Class rdf:ID="MiscFoods">
 		<rdfs:label>Miscellaneous Foods</rdfs:label>
+		<recipee:includes>anything that wasn't mentioned in the other food groups</recipee:includes>
 		<owl:disjointWith rdf:resource="#Vegetables" />
 		<owl:disjointWith rdf:resource="#Grains" />
 		<owl:disjointWith rdf:resource="#ProteinFoods" />
@@ -128,273 +135,172 @@
 		<owl:disjointWith rdf:resource="#Fruits" />
 	</owl:Class>
 
-	<!-- Cusine Class (Matt)-->
+	<!-- Cuisine Class (Matt)-->
 	<owl:Class rdf:ID="Cuisine">
 		<rdfs:label>Cuisine</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#French" />
-			<owl:Class rdf:about="#Indian" />
-			<owl:Class rdf:about="#Thai" />
-			<owl:Class rdf:about="#Japenese" />
-			<owl:Class rdf:about="#Chinese" />
-			<owl:Class rdf:about="#Spanish" />
-			<owl:Class rdf:about="#Greek" />
-			<owl:Class rdf:about="#Lebanese" />
-			<owl:Class rdf:about="#Mexican" />
-			<owl:Class rdf:about="#Italian" />
-			<owl:Class rdf:about="#MiscStyle" />
-		</owl:unionOf>
 	</owl:Class>
 
-	<!-- French Class (Matt)-->
-	<owl:Class rdf:ID="French">
-		<rdfs:label>French</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="French">
+		<recipee:origin>France</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Indian Class (Matt)-->
-	<owl:Class rdf:ID="Indian">
-		<rdfs:label>Indian</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Indian">
+		<recipee:origin>India</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Thai Class (Matt)-->
-	<owl:Class rdf:ID="Thai">
-		<rdfs:label>Thai</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Thai">
+		<recipee:origin>Thailand</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Japenese Class (Matt)-->
-	<owl:Class rdf:ID="Japenese">
-		<rdfs:label>Japenese</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Japenese">
+		<recipee:origin>Japan</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Chinese Class (Matt)-->
-	<owl:Class rdf:ID="Chinese">
-		<rdfs:label>Chinese</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Chinese">
+		<recipee:origin>China</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Spanish Class (Matt)-->
-	<owl:Class rdf:ID="Spanish">
-		<rdfs:label>Spanish</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Spanish">
+		<recipee:origin>Spain</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Greek Class (Matt)-->
-	<owl:Class rdf:ID="Greek">
-		<rdfs:label>Greek</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Greek">
+		<recipee:origin>Greece</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Lebanese Class (Matt)-->
-	<owl:Class rdf:ID="Lebanese">
-		<rdfs:label>Lebanese</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Lebanese">
+		<recipee:origin>Syria</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Mexican Class (Matt)-->
-	<owl:Class rdf:ID="Mexican">
-		<rdfs:label>Mexican</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Mexican">
+		<recipee:origin>Mexico</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- Italian Class (Matt)-->
-	<owl:Class rdf:ID="Italian">
-		<rdfs:label>Italian</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="Italian">
+		<recipee:origin>Italy</recipee:origin>
+	</recipee:Cuisine>
 
-	<!-- MiscStyle Class (Matt)-->
-	<owl:Class rdf:ID="MiscStyle">
-		<rdfs:label>Miscellaneous Style</rdfs:label>
-	</owl:Class>
+	<recipee:Cuisine rdf:ID="MiscStlye">
+		<recipee:origin>N/A</recipee:origin>
+	</recipee:Cuisine>
 
 	<!-- Temperature Class (Mike)-->
 	<owl:Class rdf:ID="Temperature">
 		<rdfs:label>Temperature</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#Hot" />
-			<owl:Class rdf:about="#Cold" />
-			<owl:Class rdf:about="#Room" />
-		</owl:unionOf>
 	</owl:Class>
 
-	<!-- Hot Class(Mike)-->
-	<owl:Class rdf:ID="Hot">
-		<rdfs:label>Hot</rdfs:label>
-	</owl:Class>
+	<recipee:Temperature rdf:ID="Hot">
+		<recipee:requiredAppliances>oven, stove, microwave, crock pot, or any other appliances that can generate heat</recipee:requiredAppliances>
+		<recipee:minTempValue>0°F</recipee:minTempValue>
+		<recipee:maxTempValue>40°F</recipee:maxTempValue>
+	</recipee:Temperature>
 
-	<!-- Cold Class(Mike)-->
-	<owl:Class rdf:ID="Cold">
-		<rdfs:label>Cold</rdfs:label>
-	</owl:Class>
+	<recipee:Temperature rdf:ID="Cold">
+		<recipee:requiredAppliances>refrigerator, freezer, cooler, or any other appliance that can generate cold air</recipee:requiredAppliances>
+		<recipee:minTempValue>41°F</recipee:minTempValue>
+		<recipee:maxTempValue>70°F</recipee:maxTempValue>
+	</recipee:Temperature>
 
-	<!-- Room Class(Mike)-->
-	<owl:Class rdf:ID="Room">
-		<rdfs:label>Room</rdfs:label>
-	</owl:Class>
+	<recipee:Temperature rdf:ID="Room">
+		<recipee:requiredAppliances>n/a</recipee:requiredAppliances>
+		<recipee:minTempValue>71°F</recipee:minTempValue>
+		<recipee:maxTempValue>120°F</recipee:maxTempValue>
+	</recipee:Temperature>
 
 	<!-- mealSize Class (Mike)-->
-	<owl:Class rdf:ID="mealSize">
+	<owl:Class rdf:ID="MealSize">
 		<rdfs:label>Size</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#Big" />
-			<owl:Class rdf:about="#Average" />
-			<owl:Class rdf:about="#Small" />
-			<owl:Class rdf:about="#Snack" />
-		</owl:unionOf>
 	</owl:Class>
 
-	<!-- Big Class(Mike)-->
-	<owl:Class rdf:ID="Big">
-		<rdfs:label>Big</rdfs:label>
-	</owl:Class>
+	<recipee:MealSize rdf:ID="Big">
+		<recipee:minServings>6</recipee:minServings>
+		<recipee:maxServings>8</recipee:maxServings>
+	</recipee:MealSize>
 
-	<!-- Average Class(Mike)-->
-	<owl:Class rdf:ID="Average">
-		<rdfs:label>Average</rdfs:label>
-	</owl:Class>
+	<recipee:MealSize rdf:ID="Average">
+		<recipee:minServings>3</recipee:minServings>
+		<recipee:maxServings>5</recipee:maxServings>
+	</recipee:MealSize>
 
-	<!-- Small Class(Mike)-->
-	<owl:Class rdf:ID="Small">
-		<rdfs:label>Small</rdfs:label>
-	</owl:Class>
+	<recipee:MealSize rdf:ID="Small">
+		<recipee:minServings>2</recipee:minServings>
+		<recipee:maxServings>2</recipee:maxServings>
+	</recipee:MealSize>
 
-	<!-- Snack Class(Mike)-->
-	<owl:Class rdf:ID="Snack">
-		<rdfs:label>Snack</rdfs:label>
-	</owl:Class>
+	<recipee:MealSize rdf:ID="Snack">
+		<recipee:minServings>0</recipee:minServings>
+		<recipee:maxServings>1</recipee:maxServings>
+	</recipee:MealSize>
 
 	<!-- healthStatus Class (Mike)-->
-	<owl:Class rdf:ID="healthStatus">
-		<rdfs:label>healthStatus</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#healthy" />
-			<owl:Class rdf:about="#midHealthy" />
-			<owl:Class rdf:about="#unHealthy" />
-		</owl:unionOf>
+	<owl:Class rdf:ID="HealthStatus">
+		<rdfs:label>Nutritional Value</rdfs:label>
 	</owl:Class>
 
-	<!-- healthy Class(Mike)-->
-	<owl:Class rdf:ID="healthy">
-		<rdfs:label>healthy</rdfs:label>
-	</owl:Class>
+	<recipee:HealthStatus rdf:ID="Healthy">
+		<recipee:description>This recipe includes a little bit of everything from myPlate.</recipee:description>
+	</recipee:HealthStatus>
 
-	<!-- midHealthy Class(Mike)-->
-	<owl:Class rdf:ID="midHealthy">
-		<rdfs:label>midHealthy</rdfs:label>
-	</owl:Class>
+	<recipee:HealthStatus rdf:ID="Midhealthy">
+		<recipee:description>This recipe includes a little bit of everything from myPlate, but the ratio of oils to vegetables is a bit high.</recipee:description>
+	</recipee:HealthStatus>
 
-	<!-- unHealthy Class(Mike)-->
-	<owl:Class rdf:ID="unHealthy">
-		<rdfs:label>unHealthy</rdfs:label>
-	</owl:Class>
+	<recipee:HealthStatus rdf:ID="Unhealthy">
+		<recipee:description>This recipe contains mostly sugars and oils.</recipee:description>
+	</recipee:HealthStatus>
 
 	<!-- foodAllergy Class (Mike)-->
-	<owl:Class rdf:ID="foodAllergy">
-		<rdfs:label>foodAllergy</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#Nut" />
-			<owl:Class rdf:about="#Berry" />
-			<owl:Class rdf:about="#Lactose" />
-			<owl:Class rdf:about="#Shellfish" />
-		</owl:unionOf>
+	<owl:Class rdf:ID="FoodAllergy">
+		<rdfs:label>FoodAllergy</rdfs:label>
 	</owl:Class>
 
-	<!-- Nut Class(Mike)-->
-	<owl:Class rdf:ID="Nut">
-		<rdfs:label>Nut</rdfs:label>
-	</owl:Class>
+	<recipee:FoodAllergy rdf:ID="Nut">
+		<recipee:severity>2</recipee:severity>
+	</recipee:FoodAllergy>
 
-	<!-- Berry Class(Mike)-->
-	<owl:Class rdf:ID="Berry">
-		<rdfs:label>Berry</rdfs:label>
-	</owl:Class>
+	<recipee:FoodAllergy rdf:ID="Berry">
+		<recipee:severity>5</recipee:severity>
+	</recipee:FoodAllergy>
 
-	<!-- Lactose Class(Mike)-->
-	<owl:Class rdf:ID="Lactose">
-		<rdfs:label>Lactose</rdfs:label>
-	</owl:Class>
+	<recipee:FoodAllergy rdf:ID="Lactose">
+		<recipee:severity>2</recipee:severity>
+	</recipee:FoodAllergy>
 
-	<!-- Shellfish Class(Mike)-->
-	<owl:Class rdf:ID="Shellfish">
-		<rdfs:label>Shellfish</rdfs:label>
-	</owl:Class>
+	<recipee:FoodAllergy rdf:ID="Shellfish">
+		<recipee:severity>3</recipee:severity>
+	</recipee:FoodAllergy>
+
+	<recipee:FoodAllergy rdf:ID="Gluten">
+		<recipee:severity>2</recipee:severity>
+	</recipee:FoodAllergy>
 
 	<!-- Difficulty Class (Mike)-->
 	<owl:Class rdf:ID="Difficulty">
 		<rdfs:label>Difficulty</rdfs:label>
-		<owl:unionOf rdf:parseType="Collection">
-			<owl:Class rdf:about="#Easy" />
-			<owl:Class rdf:about="#Medium" />
-			<owl:Class rdf:about="#Hard" />
-		</owl:unionOf>
 	</owl:Class>
 
-	<!-- Easy Class(Mike)-->
-	<owl:Class rdf:ID="Easy">
-		<rdfs:label>Easy</rdfs:label>
-	</owl:Class>
+	<recipee:Difficulty rdf:ID="Easy">
+		<recipee:difficultyLevel>5</recipee:difficultyLevel>
+	</recipee:Difficulty>
 
-	<!-- Medium Class(Mike)-->
-	<owl:Class rdf:ID="Medium">
-		<rdfs:label>Medium</rdfs:label>
-	</owl:Class>
+	<recipee:Difficulty rdf:ID="Medium">
+		<recipee:difficultyLevel>3</recipee:difficultyLevel>
+	</recipee:Difficulty>
 
-	<!-- Hard Class(Mike)-->
-	<owl:Class rdf:ID="Hard">
-		<rdfs:label>Hard</rdfs:label>
-	</owl:Class>
+	<recipee:Difficulty rdf:ID="Hard">
+		<recipee:difficultyLevel>1</recipee:difficultyLevel>
+	</recipee:Difficulty>
 
 	<!-- KitchenTools Class(Ruben) -->
 	<owl:Class rdf:ID="KitchenTools">
-			<owl:unionOf rdf:parseType="Collection">
-					<owl:Class rdf:about="#Utensils"/>
-					<owl:Class rdf:about="#MixingBowls"/>
-					<owl:Class rdf:about="#MeasuringTools"/>
-					<owl:Class rdf:about="#Appliances"/>
-					<owl:Class rdf:about="#Cookware"/>
-			</owl:unionOf>
 			<rdfs:label>KitchenTools</rdfs:label>
 	</owl:Class>
 
-	<!-- Utensils Class(Ruben) -->
-	<owl:Class rdf:ID="Utensils">
-			<owl:disjointWith rdf:resource="#MixingBowls"/>
-			<owl:disjointWith rdf:resource="#MeasuringTools"/>
-			<owl:disjointWith rdf:resource="#Appliances"/>
-			<owl:disjointWith rdf:resource="#Cookware"/>
-			<rdfs:label>Utensils</rdfs:label>
-	</owl:Class>
-
-	<!-- MixingBowls Class(Ruben) -->
-	<owl:Class rdf:ID="MixingBowls">
-			<owl:disjointWith rdf:resource="#Utensils"/>
-			<owl:disjointWith rdf:resource="#MeasuringTools"/>
-			<owl:disjointWith rdf:resource="#Appliances"/>
-			<owl:disjointWith rdf:resource="#Cookware"/>
-			<rdfs:label>MixingBowls</rdfs:label>
-	</owl:Class>
-
-	<!-- MeasuringTools Class(Ruben) -->
-	<owl:Class rdf:ID="MeasuringTools">
-			<owl:disjointWith rdf:resource="#Utensils"/>
-			<owl:disjointWith rdf:resource="#MixingBowls"/>
-			<owl:disjointWith rdf:resource="#Appliances"/>
-			<owl:disjointWith rdf:resource="#Cookware"/>
-			<rdfs:label>MeasuringTools</rdfs:label>
-	</owl:Class>
-
-	<!-- Appliances Class(Ruben) -->
-	<owl:Class rdf:ID="Appliances">
-			<owl:disjointWith rdf:resource="#Utensils"/>
-			<owl:disjointWith rdf:resource="#MixingBowls"/>
-			<owl:disjointWith rdf:resource="#MeasuringTools"/>
-			<owl:disjointWith rdf:resource="#Cookware"/>
-			<rdfs:label>Appliances</rdfs:label>
-	</owl:Class>
-
-	<!-- Cookware Class(Ruben) -->
-	<owl:Class rdf:ID="Cookware">
-			<owl:disjointWith rdf:resource="#Utensils"/>
-			<owl:disjointWith rdf:resource="#MixingBowls"/>
-			<owl:disjointWith rdf:resource="#MeasuringTools"/>
-			<owl:disjointWith rdf:resource="#Appliances"/>
-			<rdfs:label>Cookware</rdfs:label>
-	</owl:Class>
-
+	<recipee:KitchenTools rdf:ID="Utensils" />
+	<recipee:KitchenTools rdf:ID="MixingBowls" />
+	<recipee:KitchenTools rdf:ID="MeasuringTools" />
+	<recipee:KitchenTools rdf:ID="Appliances" />
+	<recipee:KitchenTools rdf:ID="Cookware" />
 
 <!-- Property Definitions (Team)-->
 
@@ -409,7 +315,7 @@
 		<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
 	</owl:Restriction>
 
-	<!-- divIdedInto Property (Matt)-->
+	<!-- dividedInto Property (Matt)-->
 	<owl:ObjectProperty rdf:ID="dividedInto">
 		<rdfs:domain rdf:resource="#Food"/>
 		<rdfs:range rdf:resource="#FoodGroups"/>
@@ -440,7 +346,7 @@
 	<!-- hasSize Property (Mike)-->
 	<owl:ObjectProperty rdf:ID="hasSize">
 		<rdfs:domain rdf:resource="#Recipe"/>
-		<rdfs:range rdf:resource="#mealSize"/>
+		<rdfs:range rdf:resource="#MealSize"/>
 	</owl:ObjectProperty>
 
 	<owl:Restriction>
@@ -452,7 +358,7 @@
 	<owl:ObjectProperty rdf:ID="isHealthy">
 		<rdfs:domain rdf:resource="#Recipe"/>
 		<!-- We may want to consIder linking this to the foods as well. (Mike)-->
-		<rdfs:range rdf:resource="#healthStatus"/>
+		<rdfs:range rdf:resource="#HealthStatus"/>
 	</owl:ObjectProperty>
 
 	<owl:Restriction>
@@ -463,7 +369,7 @@
 	<!-- hasAllergy Property (Mike)-->
 	<owl:ObjectProperty rdf:ID="hasAllergy">
 		<rdfs:domain rdf:resource="#Recipe"/>
-		<rdfs:range rdf:resource="#foodAllergy"/>
+		<rdfs:range rdf:resource="#FoodAllergy"/>
 	</owl:ObjectProperty>
 
 	<!-- hasDifficulty Property (Mike)-->
@@ -479,8 +385,8 @@
 
 	<!-- takes Property(Group Decision) -->
 	<owl:DatatypeProperty rdf:ID="takes">
-			<rdfs:domain rdf:resource="#Recipe"/>
-			<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> <!-- literal value is minutes/hours-->
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/> <!-- literal value is minutes/hours-->
 	</owl:DatatypeProperty>
 
 	<owl:Restriction>
@@ -490,8 +396,8 @@
 
 	<!-- uses Property(Ruben) -->
 	<owl:ObjectProperty rdf:ID="uses">
-			<rdfs:domain rdf:resource="#Recipe"/>
-			<rdfs:range rdf:resource="#KitchenTools"/>
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="#KitchenTools"/>
 	</owl:ObjectProperty>
 
 	<owl:Restriction>
@@ -501,8 +407,100 @@
 
 	<!-- Name Property(Matt) -->
 	<owl:DatatypeProperty rdf:ID="name">
-			<rdfs:domain rdf:resource="#Recipe"/>
-			<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-			<rdf:type rdf:resource="&owl;FunctionalProperty" />
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
 	</owl:DatatypeProperty>
+
+	<!-- OtherName Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="otherName">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	</owl:DatatypeProperty>
+
+	<!-- Occasion Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="occasion">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+	</owl:DatatypeProperty>
+
+	<!-- Total Calories Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="totalCalories">
+		<rdfs:domain rdf:resource="#Recipe"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- Includes Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="includes">
+		<rdfs:domain rdf:resource="#FoodGroups"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- Origin Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="origin">
+		<rdfs:domain rdf:resource="#Cuisine"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- minTempValue Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="minTempValue">
+		<rdfs:domain rdf:resource="#Temperature"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- maxTempValue Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="maxTempValue">
+		<rdfs:domain rdf:resource="#Temperature"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- requiredAppliances Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="requiredAppliances">
+		<rdfs:domain rdf:resource="#Temperature"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- minServings Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="minServings">
+		<rdfs:domain rdf:resource="#MealSize"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- maxServings Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="maxServings">
+		<rdfs:domain rdf:resource="#MealSize"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- Description Property(Matt) -->
+	<owl:DatatypeProperty rdf:ID="description">
+		<rdfs:domain rdf:resource="#HealthStatus"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- Severity Scale Property(Matt) -->
+	<!-- Zero being the worst, 5 being the weakest -->
+	<owl:DatatypeProperty rdf:ID="severity">
+		<rdfs:domain rdf:resource="#FoodAllergy"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
+	<!-- difficultyLevel Property(Matt) -->
+	<!-- Zero being the hardest, 5 being the easiest -->
+	<owl:DatatypeProperty rdf:ID="difficultyLevel">
+		<rdfs:domain rdf:resource="#Difficulty"/>
+		<rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+		<rdf:type rdf:resource="&owl;FunctionalProperty" />
+	</owl:DatatypeProperty>
+
 </rdf:RDF>
