@@ -3,7 +3,7 @@
 /************************************************************/
 /* Author: Matt Tothero, Ruben Swyers, Mike Pandel
 /* Creation Date: November 9, 2014
-/* Modification Date: November 26, 2014
+/* Modification Date: November 25, 2014
 /* Course: CSC480 010
 /* Professor Name: Dr. Frye
 /* Assignment: Main Project
@@ -13,6 +13,10 @@
 /* 			will be loaded at runtime through a txt file.
 /************************************************************/
 -->
+
+<!DOCTYPE rdf:RDF [
+		<!ENTITY recipee  "http://bill.kutztown.edu/~mtoth190/CSC480/RecipeOntology.owl#" >
+]>
 
 <rdf:RDF
       xmlns:owl = "http://www.w3.org/2002/07/owl#"
@@ -32,15 +36,15 @@
   <recipee:hasIngredients rdf:resource="#CheddarCheese"/>
   <recipee:hasIngredients rdf:resource="#Apple"/>
   <recipee:hasIngredients rdf:resource="#Salsa"/>
-  <recipee:isClassifiedAs rdf:resource="#MiscStyle"/>
-  <recipee:hasTemp rdf:resource="#Hot"/>
-  <recipee:hasSize rdf:resource="#Small"/>
-  <recipee:isHealthy rdf:resource="#Healthy"/>
-  <recipee:FoodAllergy rdf:resource="#Gluten"/>
-  <recipee:hasDifficulty rdf:resource="#Easy"/>
-  <recipee:uses rdf:resource="#Utensils"/>
-  <recipee:uses rdf:resource="#Cookware"/>
-  <recipee:uses rdf:resource="#Appliances"/>
+  <recipee:isClassifiedAs rdf:resource="&recipee;MiscStyle"/>
+  <recipee:hasTemp rdf:resource="&recipee;Hot"/>
+  <recipee:hasSize rdf:resource="&recipee;Small"/>
+  <recipee:isHealthy rdf:resource="&recipee;Healthy"/>
+  <recipee:hasAllergy rdf:resource="&recipee;Gluten"/>
+  <recipee:hasDifficulty rdf:resource="&recipee;Easy"/>
+  <recipee:uses rdf:resource="&recipee;Utensils"/>
+  <recipee:uses rdf:resource="&recipee;Cookware"/>
+  <recipee:uses rdf:resource="&recipee;Appliances"/>
   <recipee:takes>5</recipee:takes>
 </recipee:recipe>
 
@@ -55,16 +59,16 @@
   <recipee:hasIngredients rdf:resource="#Salt"/>
   <recipee:hasIngredients rdf:resource="#Pepper"/>
   <recipee:hasIngredients rdf:resource="#Salsa"/>
-  <recipee:isClassifiedAs rdf:resource="#Italian"/>
-  <recipee:hasTemp rdf:resource="#Hot"/>
-  <recipee:hasSize rdf:resource="#Average"/>
-  <recipee:isHealthy rdf:resource="#Healthy"/>
-  <recipee:FoodAllergy rdf:resource="#Gluten"/>
-  <recipee:hasDifficulty rdf:resource="#Italian"/>
-  <recipee:uses rdf:resource="#Utensils"/>
-  <recipee:uses rdf:resource="#MixingBowls"/>
-  <recipee:uses rdf:resource="#Cookware"/>
-  <recipee:uses rdf:resource="#Appliances"/>
+  <recipee:isClassifiedAs rdf:resource="&recipee;Italian"/>
+  <recipee:hasTemp rdf:resource="&recipee;Hot"/>
+  <recipee:hasSize rdf:resource="&recipee;Average"/>
+  <recipee:isHealthy rdf:resource="&recipee;Healthy"/>
+  <recipee:hasAllergy rdf:resource="&recipee;Gluten"/>
+  <recipee:hasDifficulty rdf:resource="&recipee;Italian"/>
+  <recipee:uses rdf:resource="&recipee;Utensils"/>
+  <recipee:uses rdf:resource="&recipee;MixingBowls"/>
+  <recipee:uses rdf:resource="&recipee;Cookware"/>
+  <recipee:uses rdf:resource="&recipee;Appliances"/>
   <recipee:takes>15</recipee:takes>
 </recipee:recipe>
 
@@ -81,15 +85,15 @@
   <recipee:hasIngredients rdf:resource="#Pepper"/>
   <recipee:hasIngredients rdf:resource="#Egg"/>
   <recipee:hasIngredients rdf:resource="#Potatoes"/>
-  <recipee:hasDifficulty rdf:resource="#MiscStyle"/>
-  <recipee:hasTemp rdf:resource="#Hot"/>
-  <recipee:hasSize rdf:resource="#Average"/>
-  <recipee:isHealthy rdf:resource="#Unhealthy"/>
-  <recipee:FoodAllergy rdf:resource="#Gluten"/>
-  <recipee:hasDifficulty rdf:resource="#Hard"/>
-  <recipee:uses rdf:resource="#Utensils"/>
-  <recipee:uses rdf:resource="#MixingBowls"/>
-  <recipee:uses rdf:resource="#Cookware"/>
+  <recipee:isClassifiedAs rdf:resource="&recipee;MiscStyle"/>
+  <recipee:hasTemp rdf:resource="&recipee;Hot"/>
+  <recipee:hasSize rdf:resource="&recipee;Average"/>
+  <recipee:isHealthy rdf:resource="&recipee;Unhealthy"/>
+  <recipee:hasAllergy rdf:resource="&recipee;Gluten"/>
+  <recipee:hasDifficulty rdf:resource="&recipee;Hard"/>
+  <recipee:uses rdf:resource="&recipee;Utensils"/>
+  <recipee:uses rdf:resource="&recipee;MixingBowls"/>
+  <recipee:uses rdf:resource="&recipee;Cookware"/>
   <recipee:takes>90</recipee:takes>
 </recipee:recipe>
 
@@ -106,13 +110,13 @@
   <recipee:hasIngredients rdf:resource="#Salt"/>
   <recipee:hasIngredients rdf:resource="#WorcestershireSauce"/>
   <recipee:hasIngredients rdf:resource="#GroundMustard"/>
-  <recipee:hasDifficulty rdf:resource="#Italian"/>
-  <recipee:hasTemp rdf:resource="#Cold"/>
-  <recipee:hasSize rdf:resource="#Average"/>
-  <recipee:isHealthy rdf:resource="#Healthy"/>
-  <recipee:hasDifficulty rdf:resource="#Medium"/>
-  <recipee:uses rdf:resource="#Utensils"/>
-  <recipee:uses rdf:resource="#MixingBowls"/>
+  <recipee:isClassifiedAs rdf:resource="&recipee;Italian"/>
+  <recipee:hasTemp rdf:resource="&recipee;Cold"/>
+  <recipee:hasSize rdf:resource="&recipee;Average"/>
+  <recipee:isHealthy rdf:resource="&recipee;Healthy"/>
+  <recipee:hasDifficulty rdf:resource="&recipee;Medium"/>
+  <recipee:uses rdf:resource="&recipee;Utensils"/>
+  <recipee:uses rdf:resource="&recipee;MixingBowls"/>
   <recipee:takes>15</recipee:takes>
 </recipee:recipe>
 
@@ -124,14 +128,14 @@
   <recipee:hasIngredients rdf:resource="#Bread"/>
   <recipee:hasIngredients rdf:resource="#AnyCheese"/>
   <recipee:hasIngredients rdf:resource="#Butter"/>
-  <recipee:hasDifficulty rdf:resource="#MiscStyle"/>
-  <recipee:hasTemp rdf:resource="#Hot"/>
-  <recipee:hasSize rdf:resource="#Small"/>
-  <recipee:isHealthy rdf:resource="#unHealthy"/>
-  <recipee:FoodAllergy rdf:resource="#Gluten"/>
-  <recipee:hasDifficulty rdf:resource="#Easy"/>
-  <recipee:uses rdf:resource="#Utensils"/>
-  <recipee:uses rdf:resource="#Cookware"/>
+  <recipee:isClassifiedAs rdf:resource="&recipee;MiscStyle"/>
+  <recipee:hasTemp rdf:resource="&recipee;Hot"/>
+  <recipee:hasSize rdf:resource="&recipee;Small"/>
+  <recipee:isHealthy rdf:resource="&recipee;Unhealthy"/>
+  <recipee:hasAllergy rdf:resource="&recipee;Gluten"/>
+  <recipee:hasDifficulty rdf:resource="&recipee;Easy"/>
+  <recipee:uses rdf:resource="&recipee;Utensils"/>
+  <recipee:uses rdf:resource="&recipee;Cookware"/>
   <recipee:takes>5</recipee:takes>
 </recipee:recipe>
 <!-- Food Instances -->
