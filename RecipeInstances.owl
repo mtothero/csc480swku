@@ -202,4 +202,9 @@
   <recipee:Dairy rdf:ID="CheeseCubes"/>
   <recipee:Vegetables rdf:ID="RedPepper"/>
   <recipee:Vegetables rdf:ID="GreenPepper"/>
+  <recipee:Grains rdf:ID="CroissantRolls"/>
+  <recipee:ProteinFoods rdf:ID="MiniSmokedViennaSausages"/>
+  <recipee:MiscFoods rdf:ID="CoconutFlakes"/>
+  <recipee:Dairy rdf:ID="CreamCheese"/>
+  <recipee:MiscFoods rdf:ID="Cinnamon"/>
 </rdf:RDF>
